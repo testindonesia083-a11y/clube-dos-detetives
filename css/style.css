@@ -1,4 +1,31 @@
-/*
+/* style.css */
+
+/* Removemos o flexbox do body para que o posicionamento absoluto funcione em relação à página inteira */
+body {
+    margin: 0;
+    background-color: #f0f0f o;
+    /* Adicionamos uma altura mínima para garantir que a página tenha espaço para rolagem, se necessário */
+    min-height: 200vh; /* 200% da altura da tela, só para teste */
+}
+
+.forma-flutuante {
+    position: absolute; /* ESSENCIAL */
+    top: 20px;          /* 20 pixels de distância do TOPO */
+    right: 40px;        /* 40 pixels de distância da DIREITA */
+    width: 200px;       /* Ajustei a largura para o exemplo */
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+/* O resto do CSS (@keyframes e .caminho-verde) continua o mesmo */
+@keyframes flutuar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.forma-flutuante .caminho-verde {
+    fill: #2ecc71;
+}
 Theme Name: Twenty Twenty-Five
 Theme URI: https://wordpress.org/themes/twentytwentyfive/
 Author: the WordPress team
